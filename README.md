@@ -1,3 +1,1 @@
-# 2023MPIA
-
-bad bad code, day day up.
+Implementation of paper " A Novel Immune Algorithm for MultipartyMultiobjective Optimization"
