@@ -110,11 +110,6 @@
                 end
                 [D,FrontNo_low,FrontNo,~]  = UpdateDominantPopulation([D,C1],Global.N,Global.DM);
                 nowGen = nowGen+1;
-                 if 1
-                     showshow(D,A,Global.DM);
-                %     figure(11111)
-                %     plot(RRRR);
-                 end
                 p(nowGen) = 0.95*1/(1+exp(20*(nowGen/MaxGen-0.3)));
             end
 end
