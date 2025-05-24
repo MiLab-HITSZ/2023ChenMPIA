@@ -89,7 +89,7 @@ for h = 30:30:120
     title([strcell{count} '  At an altitude of ' num2str(h) 'm'],'Position',[26,-12]);
 end
 %%
-problemList={@MPUAV3,@MPUAV2,@MPUAV3,@MPUAV4,@MPUAV5,@MPUAV6};
+problemList={@MPUAV1,@MPUAV2,@MPUAV3,@MPUAV4,@MPUAV5,@MPUAV6};
 maxiterList={100000,100000,100000,100000,100000,100000};
 data.lb = [ones(1,dim/2-1).*-2 ones(1,dim/2+1).*0];
 data.ub = [ones(1,dim/2-1).*ystep ones(1,dim/2+1).*1];
@@ -105,7 +105,7 @@ for problemindex=1:numel(problemList)
     callfit = newp.Global.fn;
     %% NSGA2
     rng default;rng(RANDSEED);
-    test_case={@MPIA,problem,popnum,1,1,maxiter,dim};
+    test_case={@OptAll,problem,popnum,1,1,maxiter,dim};
 
     for i =1:numel(test_case)/7
         if ~PLOTHV
