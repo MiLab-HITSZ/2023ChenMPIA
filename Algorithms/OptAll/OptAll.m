@@ -15,9 +15,6 @@ function OptAll(Global)
             MatingPool = TournamentSelection(2,Global.N,FrontNo,-CrowdDis);
             Offspring  = GA(Population(MatingPool));                
             [Population,FrontNo,CrowdDis] = EnvironmentalSelection([Population,Offspring],Global.N); 
-                if Global.showflag
-                    showshow(Population,Global.DM);
-                end
         end       
 end
 
